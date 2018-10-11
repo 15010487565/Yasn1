@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="oftendhopfunc" type="id"/>
+    <item name="callservicefunc" type="id"/>
+    <item name="mycollectfunc" type="id"/>
+</resources>

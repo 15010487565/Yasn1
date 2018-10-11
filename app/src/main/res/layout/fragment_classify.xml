@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:background="@color/black_f7"
+    android:orientation="vertical">
+    <include
+        layout="@layout/view_simple_topbar" />
+    <include
+        layout="@layout/include_classifytitle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:background="@color/white"
+            android:focusableInTouchMode="true">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/calssifyrecy_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/black_f7"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_10"
+                android:orientation="vertical"
+                android:layout_weight="2">
+                <ImageView
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/failtoload"/>
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.yasn.purchase.view.NoScrollGridView
+                            android:id="@+id/calssifyrecy_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:columnWidth="60dp"
+                            android:stretchMode="columnWidth"
+                            android:numColumns="3"
+                            android:verticalSpacing="10dp"
+                            android:horizontalSpacing="10dp"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@color/white"/>
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>
+

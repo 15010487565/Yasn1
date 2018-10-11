@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topbat_parent"
+        layout="@layout/view_simple_topbar" />
+
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topbat_parent">
+    </FrameLayout>
+    <!--<www.xcd.com.mylibrary.view.NoScrollPreloadViewPager-->
+        <!--android:id="@+id/main_viewpager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/topbat_parent">-->
+
+    <!--</www.xcd.com.mylibrary.view.NoScrollPreloadViewPager>-->
+
+    <TextView
+        android:id="@+id/tv_MainLin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1.5"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/main_tabwidget_height"
+        android:background="@color/line_gray"/>
+    <www.xcd.com.mylibrary.widget.SnsTabWidget
+        android:id="@+id/main_tabwidget"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_tabwidget_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:showDividers="none" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_65"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:focusable="false">
+
+        <LinearLayout
+            android:id="@+id/main_tabitem_find"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="@dimen/height_40"
+                android:layout_height="@dimen/height_40"
+                android:padding="@dimen/margin_1dp"
+                android:background="@mipmap/icon_tab_find"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/find"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/margin_3"
+                android:textColor="@color/black_66"
+                android:textSize="@dimen/main_tabitem" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_tabitem_findH"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:alpha="0">
+            <ImageView
+                android:id="@+id/main_tabitem_iconhl"
+                android:layout_width="@dimen/height_40"
+                android:layout_height="@dimen/height_40"
+                android:padding="@dimen/margin_1dp"
+                android:background="@mipmap/icon_tab_find_press" />
+            <TextView
+                android:id="@+id/main_tabitem_texthl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_3"
+                android:gravity="bottom"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/main_tabitem"
+                android:text="@string/find"/>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

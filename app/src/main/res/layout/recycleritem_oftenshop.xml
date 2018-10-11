@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:lee="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/margin_1dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:minHeight="90dp"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_15">
+    <RelativeLayout
+        android:id="@+id/rl_imageOnClick"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_marginRight="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/iv_Oftenshop"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/errorimage" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_orderListHintNum"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:gravity="center"-->
+            <!--android:background="@color/transparent"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/textsize_12" />-->
+
+        <ImageView
+            android:id="@+id/iv_OftenShroud"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:background="@mipmap/soldout"
+            android:scaleType="fitXY" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10">
+                <include
+                    layout="@layout/inciude_listtop_name"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--<com.yasn.purchase.view.TagsLayout-->
+                    <!--android:id="@+id/spec_OftenShop"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/re_orderListName"-->
+                    <!--android:background="#ffffff"-->
+                    <!--android:paddingRight="@dimen/margin_10"-->
+                    <!--lee:tagHorizontalSpace="10dp"-->
+                    <!--lee:tagVerticalSpace="10dp" />-->
+                <ImageView
+                    android:id="@+id/iv_Addshopcar"
+                    android:layout_width="@dimen/height_40"
+                    android:layout_height="@dimen/height_40"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/oftershop_red"/>
+                <TextView
+                    android:id="@+id/spec_OftenShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toLeftOf="@id/iv_Addshopcar"
+                    android:background="#ffffff" />
+                <LinearLayout
+                    android:id="@+id/ll_OftenshopMoney"
+                    android:layout_below="@id/spec_OftenShop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_OftenshopMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="￥XX.XX"
+                        android:textColor="@color/orange"
+                        android:textSize="@dimen/textsize_14" />
+                    <TextView
+                        android:id="@+id/tv_OftenshopCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="XXXX"
+                        android:textColor="@color/black_99"
+                        android:textSize="@dimen/textsize_12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_below="@id/ll_OftenshopMoney">
+                    <include
+                        layout="@layout/include_threelable" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

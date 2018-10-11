@@ -1,0 +1,2 @@
+include ':app', ':mylibrary', ':shareLibrary', ':JsBridgelibrary', ':sobotsdk', ':zxinglite'
+include ':spinner_lib'

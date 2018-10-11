@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/top_bar_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/top_search_padding"
+    android:paddingBottom="@dimen/top_search_padding"
+    android:paddingRight="@dimen/margin_10"
+    android:paddingLeft="@dimen/margin_10">
+
+
+    <TextView
+        android:id="@+id/tv_HomeAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingRight="@dimen/margin_10"
+        android:text=""
+        android:textStyle="normal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_serach" />
+
+    <LinearLayout
+        android:id="@+id/ll_HomeTopSearch"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/top_search_height"
+        android:background="@drawable/shape_white"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/margin_15"
+            android:layout_height="@dimen/margin_15"
+            android:background="@mipmap/search"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_3" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="@string/home_search"
+            android:lines="1"
+            android:textColor="@color/black_33"
+            android:textSize="@dimen/textsize_serach"
+            android:gravity="center_vertical"
+            android:textColorHint="@color/black_66" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_orange_right"
+            android:gravity="center"
+            android:paddingLeft="@dimen/height_20"
+            android:paddingRight="@dimen/height_20"
+            android:text="搜索"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_serach" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_HomeCode"
+        android:layout_width="@dimen/margin_25"
+        android:layout_height="@dimen/margin_25"
+        android:background="@mipmap/saoyisao"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/margin_15" />
+</LinearLayout>

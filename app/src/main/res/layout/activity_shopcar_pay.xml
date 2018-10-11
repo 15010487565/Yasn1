@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_simple_topbar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@color/line_c3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black_f7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_40"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_10"
+                android:text="收货信息"
+                android:textColor="@color/black_66"
+                android:textSize="@dimen/textsize_14" />
+
+            <RelativeLayout
+                android:id="@+id/rl_StartAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_AddressStart"
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:background="@mipmap/home_top_arrows"
+                    android:contentDescription="@null"
+                    android:duplicateParentState="true" />
+                <TextView
+                    android:id="@+id/tv_NullAddressHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_40"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:text="添加收货地址"
+                    android:textColor="@color/black_66"
+                    android:textSize="@dimen/textsize_14" />
+                <LinearLayout
+                    android:id="@+id/ll_SignforName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/iv_AddressStart"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:minHeight="@dimen/height_40"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="收货人："
+                        android:textColor="@color/black_66"
+                        android:textSize="@dimen/textsize_14" />
+
+                    <TextView
+                        android:id="@+id/tv_ShopCarPayName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textColor="@color/black_66"
+                        android:textSize="@dimen/textsize_14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_SignforAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/height_40"
+                    android:padding="@dimen/margin_10"
+                    android:layout_toLeftOf="@id/iv_AddressStart"
+                    android:layout_below="@id/ll_SignforName"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="收货地址："
+                        android:textColor="@color/black_66"
+                        android:textSize="@dimen/textsize_14" />
+
+                    <TextView
+                        android:id="@+id/tv_ShopCarPayAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textColor="@color/black_66"
+                        android:textSize="@dimen/textsize_14" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_40"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_10"
+                android:text="商品信息"
+                android:textColor="@color/black_66"
+                android:textSize="@dimen/textsize_14" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rc_ShopcarSignfor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" />
+            </android.support.v4.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingRight="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:text="积分抵现"
+                    android:textColor="@color/black_66"
+                    android:textSize="@dimen/textsize_14" />
+
+                <TextView
+                    android:id="@+id/tv_ShopCarPayIntegral"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_40"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="@dimen/margin_10"
+                    android:text="暂无可用积分"
+                    android:textColor="@color/black_99"
+                    android:textSize="@dimen/textsize_14" />
+
+                <Switch
+                    android:id="@+id/sw_ShopCarPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:switchMinWidth="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ShopCarPayHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_10"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="温馨提示："
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/textsize_14" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单未发货前如果取消订单，积分将全部返还；"
+                    android:textColor="@color/black_66"
+                    android:textSize="@dimen/textsize_12" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="订单发货后所使用积分将不予以返还，请谨慎下单~"
+                    android:textColor="@color/black_66"
+                    android:textSize="@dimen/textsize_12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:text="发票"
+                    android:textColor="@color/black_66"
+                    android:textSize="@dimen/textsize_14" />
+
+                <TextView
+                    android:id="@+id/tv_Invoice"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height_40"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="@dimen/margin_5"
+                    android:text="不需要发票"
+                    android:textColor="@color/black_99"
+                    android:textSize="@dimen/textsize_14" />
+
+                <ImageView
+                    android:layout_width="@dimen/margin_15"
+                    android:layout_height="@dimen/margin_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_15"
+                    android:background="@mipmap/home_top_arrows"
+                    android:contentDescription="@null"
+                    android:duplicateParentState="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:text="备注："
+                    android:textColor="@color/black_66"
+                    android:textSize="@dimen/textsize_14" />
+
+                <TextView
+                    android:id="@+id/tv_ShopCarPayRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_40"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/margin_10"
+                    android:singleLine="true"
+                    android:hint="选填，填写留言备注（限100字）"
+                    android:textColor="@color/black_66"
+                    android:textColorHint="@color/black_99"
+                    android:textSize="@dimen/textsize_14" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:background="@color/line_c3"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/line_gray"
+        android:paddingLeft="@dimen/margin_10">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tv_ShopcarPayTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合计："
+                android:textColor="@color/black_33"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:id="@+id/tv_ShopcarPayTotalMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_ShopcarPayTotal"
+                android:text="￥XX.XX"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:id="@+id/tv_ShopcarPayCarriageMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_ShopcarPayTotal"
+                android:layout_marginTop="@dimen/margin_3"
+                android:text="(含运费￥0.00)"
+                android:textColor="@color/black_66"
+                android:textSize="@dimen/textsize_14" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_StartPay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:text="结算"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
